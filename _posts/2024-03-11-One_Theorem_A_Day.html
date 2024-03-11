@@ -1,0 +1,27 @@
+---
+layout: post
+title: "One Theorem A Day"
+subtitle: ""
+date: 2024-03-11 17:08:00 +11:00
+background: '/img/posts/theorem.jpg'
+---
+
+<p>Analysis 1</p>
+<p>Disclaimer: Proofs presented here are no way correct nor the only way to do through the proof. It was published with the sole purpose of giving me the confidence to do proofs and to synthesis the proofs that was presented in class.</p>
+
+<p><i>Theorem:</i> Let \(\{A_i\}_{i \in I}\) and  \(\{B_i\}_{i \in I}\) be two families of mutually disjoint set over the same index set I. If \(A_i \sim B_i\) for all \(i\in I\) then \(\cup_{i \in I} A_i \sim \cup_{i\in I} B_i\).</p>
+<p> Proof: Assume that \(A_i \sim B_i\), then this means there exists a bijection \(f_i: A_i \sim B_i\) for all \(i \in I\). Consider the rule, \(f: \cup_{i \in I}A_i \sim \cup_{i\in I} B_i\) defined as \(f(x) = f_i(x)\).
+</p>
+
+<h5>Claim: \(f\) is a well-defined function</h5>
+<p>We now claim that \( f \) is a well defined function. Since \( \cup_{i\in I}\{A_i\} \) is a set of mutually disjoint sets and using the definition of \(f\), we see that for every \(x \in \cup_{i\in I}\{A_i\} \), \(x \) has an image in \(\cup_{i \in I}\{B_i\} \). This means \(f\) is a well defined function. </p>
+
+<h5>Claim: \(f\) is injective</h5>
+<p> Next, we now show that \(f\) is injective. That is if \(x_1, x_2 \in \cup_{i \in I}\{A_i\} \) such that \(f(x_1) = f(x_2) \) then \(x_1 = x_2\). By direct proof, let's assume that \(x_1, x_2 \in \cup_{i \in I}\{A_i\} \) such that \(f(x_1) = f(x_2)\), then by definition of \(f\), f_i(x_1) = f_j (x_2) <i>[Note: Despite the equality, we cannot assume that f will give us the same function \(f_i\), \(f_j\) just yet.]</i> Since \(f(x_1) = f(x_2)\) and \(\{A_i\}\) are mutually disjoint sets, then \(x_1\) and \(x_2\) must be in the same \(A_i\). So \(i = j\). Since \(f_i\) is injective and \(f_i(x_1) = f_j(x_2)\), this means \(x_1 = x_2\). Therefore, \(f\) must be injective.
+</p>
+
+<h5>Claim: \(f\) is surjective</h5>
+<p>To show that \(f\) is surjective, we pick an arbitrary element in the codomain and show that it has a preimage under f. Let \(y \in \cup_{i\in I}\{B_i\}\). Since \(f_i\) is surjective, then it means that is has a preimage \(x\) in \(\cup_{i \in I}\{A_i\}\) such that \(f_i(x) = y\). Then it follows that \(f(x) = f_i(x) = y\) [Using the definition of \(f\)]. And so, \(y\) has a preimage under \(f\). Since \(y\) is arbitrary, then we have shown the for all \(y \in \cup_{i\in I}B_i\), \(y\) has a preimage \(x \in \{A_{i \in I}\}\). Thus, \(f\) is surjective. </p>
+
+<h5>Claim: \(f\) is bijective</h5>
+<p>Since \(f\) is surjective and injective, therefore \(f\) is bijective. This means \(f\) is a bijection between \(A_i\) and  \(B_i\). Therefore \(\cup_{i\in I}A_i \sim \cup_{i\in I}B\).</p> \(\text{QED}\).
