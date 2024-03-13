@@ -1,0 +1,45 @@
+---
+layout: post
+title: "One Theorem A Day: A is subset of f-1f(A)"
+subtitle: ""
+date: 2024-03-13 11:10:00 +11:00
+background: '/img/posts/theorem.jpg'
+---
+
+<p>Analysis 1: Set Theory</p>
+<p>Disclaimer: Proofs presented here are no way correct nor the only way to do through the proof. It was published with the sole purpose of giving me the confidence to do proofs and to synthesis the proofs that was presented in class.</p>
+
+<p><i>Theorem: Let \(X, Y\) be sets. Let \(A \subset X\) and \(B \subset Y\). Let \(f: X\to Y\). Then \(A \subset f^{-1}(f(A))\) and \(f(f^{-1}(B)) \subset B\). [Side Note: \(f^{-1}\) in this context does not mean \(f\) is a bijection, but rather \(f^{-1}\) is a set such that it gives us \(A\) back. Remember that functions are also relations and relations are sets.]</i></p>
+
+<p><i>Proof of \(A \subset f^{-1}(f(A))\):</i>
+	Let \(x \in A\). We now show that \(x \in f^{-1}(f(A))\).
+</p>
+
+<p>Since \(a \in A\), this means \(f(x)\) is in the image of \(A\) [in symbols: \(f(x) \in f(A)\)]. So, \(x\) must be in \(f^{-1}(f(A))\).</p>
+
+\(\text{QED}\).
+
+<p><i>Proof of \(f(f^{-1}(B))\):</i>
+	Let \(y \in f(f^{-1}(B))\). We need to show that \(y \in B.\)
+</p>
+
+<p>
+	Since \(y \in f(f^{-1}(B))\), this there exists \(x \in X\) such that \(x \in f^{-1}(B)\) and \(f(x) =y\). This means that \(f(x) \in B\). Since \(f(x) = y\), then \(y \in B\).
+</p>
+
+\(\text{QED}\).
+
+<h5><br/>Example: \(A \subset f^{-1}(f(A))\) </h5>
+
+<p>Example given in class. Let \(f: \mathbb{R} \to \mathbb{R}, f(x) = x^2\). Let \(A = [0,1] \subset \mathbb{R}\). Observe that \(f(A) = [0, 1]\), and \(f^{-1}([0,1]) = [-1, 1]\) and \([0, 1] \subset [-1, 1]\). So, \([0, 1] \subset f^{-1}(f([0, 1]))\).</p>
+
+<p>Example I've come-up with (although this is just a derivative of what's given in class). Let \(f: \mathbb{R} \to \mathbb{R}, f(x) = |x|\). Let \(A = [a, b]\) where \(0 \leq a < b\) [\(a\) and \(b\) are non-negative]. Then, \(f([a,b]) = [a,b]\). [\(f^{-1}([a,b])\) What set in \(\mathbb{R}\) will give us \([a,b]\) back? \([-b, b]\)], So, \(f^{-1}([a,b]) = [-b, b] \) and \([a,b] \subset [-b, b]\).</p>
+
+<h5><br/>Example: \(f(f^{-1}(B)) \subset B\)</h5>
+
+<p>Example given in class. (Consider the same example given above). 
+Let \(f\) be a function \(f: \mathbb{R} \to \mathbb{R}, f(x) = x^2\). Let \(B = [-1, 1]\), then \(f^{-1}(B) = [-1, 1]\). So, \(f([-1, 1]) = [0, 1]\). Therefore \(f(f^{-1}([-1, 1])) = f(f^{-1}(B)) = [0,1] \subset [-1, 1] = B\).
+</p>
+
+
+<p>Personal Note: I had a hard time wrapping my head these 2 properties of sets. As of writing, it is still the case, but I'm recreating the proof here as how I understood it now. My professor wrote everything down in symbols, and I guess that's why it has lost a lot of context making it hard to be digested.</p>
